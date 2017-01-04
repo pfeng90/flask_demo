@@ -17,7 +17,7 @@ def index():
         }
     ]
     htmlstr=render_template("child.html", title = "myblog", user = user, posts = posts)
-    print htmlstr
+    #print htmlstr
     return htmlstr
 
 @app.route('/login', methods = ['GET', 'POST'])
@@ -29,4 +29,7 @@ def login():
         print(a)
         flash(a)
         return redirect('/index')
-    return render_template('login.html', title = 'Sign in', form = form)
+    return render_template('login.html', 
+                            title = 'Sign in', 
+                            form = form,
+                            providers = app.config['OPENID_PROVIDER'])
