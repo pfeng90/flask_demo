@@ -60,3 +60,12 @@ def chapter():
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
     print("chapter called")
     return render_template('chapter.html')
+
+#创建书籍的路由处理函数
+@app.route('/books')
+def book_new():
+    #test
+    import time
+    print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+    print("book called")
+    return render_template('books.html')
