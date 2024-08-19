@@ -42,3 +42,12 @@ def bookstore():
     import time
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
     return render_template('bookstore.html')
+
+#创建书籍的路由处理函数
+@app.route('/book')
+def book():
+    #test
+    import time
+    print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+    print("book called")
+    return render_template('book.html')
