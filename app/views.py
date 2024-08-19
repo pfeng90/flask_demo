@@ -51,3 +51,12 @@ def book():
     print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
     print("book called")
     return render_template('book.html')
+
+#创建章节的路由处理函数
+@app.route('/chapter')
+def chapter():
+    #test
+    import time
+    print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+    print("chapter called")
+    return render_template('chapter.html')
