@@ -33,3 +33,12 @@ def login():
                             title = 'Sign in', 
                             form = form,
                             providers = app.config['OPENID_PROVIDER'])
+
+#创建书库的路由处理函数
+@app.route('/bookstore')
+def bookstore():
+    print("bookstore called") #test
+    #打印时间信息 test
+    import time
+    print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
+    return render_template('bookstore.html')
